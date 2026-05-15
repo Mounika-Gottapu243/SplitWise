@@ -1,11 +1,16 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoginPage from "./pages/login";
-
+import Dashboard from "./pages/Dashboard";
+import ProfilePage  from "./pages/profile";
+import ProfileSettings from "./pages/setting";
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/Dashboard" element={<Dashboard />} />
+        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/setting" element={<ProfileSettings/>}/>
       </Routes>
     </BrowserRouter>
   );

@@ -1,20 +1,26 @@
-interface ButtonProps{
-    label : string;
-    onClick ?: () => void;
-    type?: "button" | "submit" | "reset";
-    variant?: "primary" | "secondary";
-
+interface ButtonProps {
+  label: string;
+  onClick?: () => void;
+  type?: "button" | "submit" | "reset";
+  variant?: "primary" | "secondary";
 }
 
-
-
-function Button({ label, onClick, type = "button", variant = "primary" }: ButtonProps) {
+function Button({
+  label,
+  onClick,
+  type = "button",
+  variant = "primary",
+}: ButtonProps) {
   return (
     <button
-    type={type}
-    onClick={onClick}
-    className={`w-full py-2 px-4 rounded-lg text-white font-semibold transition-colors duration-200
-        ${variant === "primary" ? "bg-green-500 hover:bg-green-600" : "bg-gray-400 hover:bg-gray-500"}
+      type={type}
+      onClick={onClick}
+      className={`w-full py-2 px-4 rounded-lg text-white font-semibold transition-colors duration-200
+        ${
+          variant === "primary"
+            ? "bg-[#0f3f4a] hover:bg-[#0b3038]"
+            : "bg-[#0f766e] hover:bg-[#115e59]"
+        }
       `}
     >
       {label}
