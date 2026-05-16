@@ -3,6 +3,7 @@ import LoginPage from "./pages/login";
 import Dashboard from "./pages/Dashboard";
 import ProfilePage  from "./pages/profile";
 import ProfileSettings from "./pages/setting";
+import HomePage from "./pages/Home";
 function App() {
   return (
     <BrowserRouter>
@@ -11,6 +12,7 @@ function App() {
         <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/setting" element={<ProfileSettings/>}/>
+        <Route path ="/Home"element={<HomePage/>}/>
       </Routes>
     </BrowserRouter>
   );
